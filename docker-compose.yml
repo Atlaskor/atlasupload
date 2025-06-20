@@ -11,3 +11,10 @@ services:
       - ./php.ini:/usr/local/etc/php/php.ini
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.myapp.rule=Host(`www.mediakor.com`)"
+      - "traefik.http.routers.myapp.entrypoints=web"
+      - "traefik.http.middlewares.uploadlimit.buffering.maxRequestBodyBytes=10737418240"
+      - "traefik.http.routers.myapp.middlewares=uploadlimit"
+      - "traefik.http.services.myapp.loadbalancer.server.port=8280"

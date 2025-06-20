@@ -9,6 +9,5 @@ services:
     volumes:
       - ./app:/var/www/html
       - ./php.ini:/usr/local/etc/php/php.ini
-      - /:/var/www/html
     extra_hosts:
       - "host.docker.internal:host-gateway"

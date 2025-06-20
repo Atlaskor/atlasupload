@@ -51,3 +51,9 @@ RUN a2enmod rewrite
 RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
 COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
+
+<Directory /var/www/html>
+    AllowOverride All
+    Require all granted
+</Directory>
+

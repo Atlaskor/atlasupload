@@ -53,4 +53,3 @@ RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 RUN echo '<Directory /var/www/html>\nAllowOverride All\nRequire all granted\n</Directory>' >> /etc/apache2/apache2.conf
-

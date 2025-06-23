@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: php_apache_large_upload1
+    container_name: php_apache_large_upload
     ports:
       - "8380:80"
     volumes:

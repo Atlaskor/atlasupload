@@ -5,7 +5,7 @@ services:
     build: .
     container_name: php_apache_large_upload
     ports:
-      - "8380:80"
+      - "8480:80"
     volumes:
       - ./app:/var/www/html
     extra_hosts:

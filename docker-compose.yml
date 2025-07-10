@@ -3,9 +3,9 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: php_apache_large_upload2
+    container_name: php_apache_large_upload3
     ports:
-      - "8480:80"
+      - "8580:80"
     volumes:
       - ./app:/var/www/html
     extra_hosts:
